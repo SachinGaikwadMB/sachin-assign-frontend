@@ -10,7 +10,7 @@ import { CheckoutService } from './shared/checkout.service';
 export class AppComponent implements OnInit{
  
   title = 'final-assignment-ui';
-  apiResponse : any;
+  
 
   constructor(private checkoutService : CheckoutService) {}
 
