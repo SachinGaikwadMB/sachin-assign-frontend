@@ -1,0 +1,31 @@
+<!-- =================================== About Product and Buy header =================== -->
+<div class="conteiner-fluid">
+    <div class="header">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="left">
+            <span>About Product</span>
+          </div>
+        </div>
+        <div class="col-md-6 center">
+          <div class="right">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6" style="background-color: red;">
+        <div class="product-details" *ngFor="let product of productsData">
+            {{product.name}}
+        </div>
+        </div>
+        <div class="col-sm-6" style="background-color: blue;">
+            <div class="product-images">
+
+            </div>
+        </div>
+    </div>    
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CheckoutService } from 'src/app/shared/checkout.service';
 
 @Component({
   selector: 'app-checkout',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
   apiResponse : any;
-  constructor() { }
+  
+  constructor(private checkoutService : CheckoutService) { }
 
   ngOnInit(): void {
+    this.checkoutService.getResponse().subscribe(
+      (response) => {
+        console.log(response);
+        this.apiResponse = response;
+      }
+    );
   }
 
 }

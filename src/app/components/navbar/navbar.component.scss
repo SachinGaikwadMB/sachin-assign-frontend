@@ -1,0 +1,73 @@
+@import "../../../assets/variables/variables";
+
+@mixin nav-items-common($height, $width, $left, $top) {
+  height: $height;
+  width: $width;
+  left: $left;
+  top: $top;
+
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 75px;
+  letter-spacing: 0px;
+  text-align: center;
+  color:$nav-item-color;
+}
+
+.contact-header {
+  background: $contact-header-background;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: Poppins;
+  line-height: 18px;
+  color: $contact-details-font-color;
+}
+
+.main-header {
+  height: 92px;
+  top: 44px;
+  background:$main-header-background ;
+}
+
+.logo {
+    height: 40.05464172363281px;
+    width: 33.47238540649414px;
+    left: 25.2969970703125px;
+    top: 13.94537353515625px;
+  }
+
+.laptops {
+  @include nav-items-common(80px, 65px, 380px, 50px);
+}
+
+.desktops {
+  @include nav-items-common(80px, 95px, 469px, 50px);
+}
+
+.net-devices {
+  @include nav-items-common(76px, 141px, 582px, 52px);
+}
+
+.printer-scanner {
+  @include nav-items-common(76px, 140px, 747px, 52px);
+}
+
+.pc-parts {
+  @include nav-items-common(76px, 65px, 911px, 52px);
+}
+
+.all-other {
+  @include nav-items-common(76px, 130px, 998px, 52px);
+}
+
+.repairs {
+  @include nav-items-common(76px, 54px, 1150px, 52px);
+}
