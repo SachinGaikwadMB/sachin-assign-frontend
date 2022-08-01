@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { loadStripe } from '@stripe/stripe-js';
 import { PaymentInfo } from 'src/app/common/payment-info';
-import { CheckoutService } from 'src/app/shared/checkout.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -14,10 +13,11 @@ export class CheckoutComponent implements OnInit {
 
   // We load  Stripe
   stripePromise = loadStripe(environment.stripePublishableKey);
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+    ) {}
   
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
 
   async pay(): Promise<void> {
@@ -27,7 +27,7 @@ export class CheckoutComponent implements OnInit {
       currency: 'INR',
       // amount on cents *10 => to be on dollar
       amount: 99900,
-      quantity: '1',
+      quantity: 1,
       cancelUrl: 'http://localhost:4200/cancel',
       successUrl: 'http://localhost:4200/success',
     };

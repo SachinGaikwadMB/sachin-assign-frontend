@@ -1,51 +1,118 @@
-.about-buy-product {
-  height: 101px;
-  top: 136px;
-  background-color: aqua;
-}
-
-.about-product {
-  display: flex;
-  justify-content: start;
-  width: 103px;
-  height: 21px;
-}
-
 .header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   height: 101px;
 }
+
 .center {
   display: flex;
   text-align: center;
-  justify-content: center;
+  justify-content: flex-end;
+  flex-direction: column;
 }
+
+.left,
 .right {
-  margin-top: 26px;
-}
-.left {
   margin-top: 40px;
 }
+
 .left span {
   font-weight: 600;
   font-size: 14px;
+  font-family: Poppins;
   color: #666666;
-  margin-left: 42%;
+  margin-left: 28%;
   border-bottom: 2px solid #0156ff;
 }
 
-// .product-details {
-//   height: 747px;
-//   width: 1064px;
-//   left: 0px;
-//   top: 237px;
-//   border-radius: 0px;
-// }
+.price {
+  font-family: Poppins;
+  font-size: 14px;
+  line-height: 21px;
+  margin-left: 8.5rem;
+}
 
-// .product-images {
-//   height: 747px;
-//   width: 855px;
-//   left: 1065px;
-//   top: 237px;
-//   border-radius: 0px;
-// }
+.quantity {
+  margin-left: 10px;
+  width: 2.5rem;
+  background: #f5f7ff;
+  font-family: Poppins;
+}
+
+
+.product-description {
+  padding: 2rem;
+  background-color: #f5f7ff;
+}
+
+.product-images {
+  background-color: #fff;
+}
+
+.carousel-inner .carousel-item img {
+  width: 400px;
+  height: 400px;
+}
+
+.carousel-indicators button {
+  width:  6px;
+  height: 6px;
+  border-radius:100%;
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: #0156ff;
+}
+
+.about span {
+  font-weight: 600;
+  font-size: 14px;
+  font-family: Poppins;
+  color: #666666;
+  border-bottom: 2px solid #0156ff;
+}
+
+.title {
+  margin-top: 10%;
+}
+
+.title span {
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.product-info {
+  font-family: Poppins;
+}
+
+.product-name {
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.custom-button{
+  width: 121px;
+  height: 40px;
+  border-radius: 40px;
+  margin-left: 1.5rem;
+  font-family: Poppins;
+}
+
+@media screen and (max-width: 810px) {
+  .product-images  {
+    margin-top: 6rem;
+  }
+  .about span {
+    line-height: 55px;
+  }
+  .product-info ul {
+    margin: 1rem 0 0 -1rem;
+  }
+  .product-name {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+  .ms-3 {
+    margin-left: -3rem !important;
+  }
+}

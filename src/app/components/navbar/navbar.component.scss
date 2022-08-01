@@ -9,10 +9,8 @@
   font-family: Poppins;
   font-size: 14px;
   font-weight: 600;
+  color: $nav-item-color;
   line-height: 75px;
-  letter-spacing: 0px;
-  text-align: center;
-  color:$nav-item-color;
 }
 
 .contact-header {
@@ -31,20 +29,29 @@
   color: $contact-details-font-color;
 }
 
+.navbar {
+  z-index: 1;
+}
+
 .main-header {
   height: 92px;
   top: 44px;
-  background:$main-header-background ;
+  background: $main-header-background;
 }
 
 .logo {
-    height: 40.05464172363281px;
-    width: 33.47238540649414px;
-    left: 25.2969970703125px;
-    top: 13.94537353515625px;
-  }
+  height: 40.05464172363281px;
+  width: 33.47238540649414px;
+  left: 25.2969970703125px;
+  top: 13.94537353515625px;
+}
+
+ul {
+  background-color: white;
+}
 
 .laptops {
+  margin-left: 1.5rem;
   @include nav-items-common(80px, 65px, 380px, 50px);
 }
 
@@ -69,5 +76,27 @@
 }
 
 .repairs {
-  @include nav-items-common(76px, 54px, 1150px, 52px);
+  @include nav-items-common(76px, 65px, 1150px, 52px);
+}
+
+@media screen and (max-width: 912px) {
+  .laptops,
+  .desktops,
+  .net-devices,
+  .printer-scanner,
+  .pc-parts,
+  .all-other,
+  .repairs {
+    height: 50px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .contact-header,
+  .main-header {
+    position: fixed;
+    z-index: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
 }
