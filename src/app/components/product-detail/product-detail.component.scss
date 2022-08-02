@@ -32,12 +32,11 @@
 }
 
 .quantity {
-  margin-left: 10px;
-  width: 2.5rem;
+  margin-left: 1rem;
+  width: 3rem;
   background: #f5f7ff;
   font-family: Poppins;
 }
-
 
 .product-description {
   padding: 2rem;
@@ -54,9 +53,9 @@
 }
 
 .carousel-indicators button {
-  width:  6px;
+  width: 6px;
   height: 6px;
-  border-radius:100%;
+  border-radius: 100%;
 }
 
 .carousel-dark .carousel-indicators [data-bs-target] {
@@ -91,7 +90,7 @@
   font-weight: 600;
 }
 
-.custom-button{
+.custom-button {
   width: 121px;
   height: 40px;
   border-radius: 40px;
@@ -99,9 +98,36 @@
   font-family: Poppins;
 }
 
-@media screen and (max-width: 810px) {
-  .product-images  {
+
+.buy-option {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+
+}
+
+.price-md{
+  margin-left: 1rem;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+}
+.quantity-md  {
+  margin-left: 1rem;
+  width: 4rem;
+  background: #f5f7ff;
+  font-family: Poppins;
+
+}
+
+@media screen and (max-width: 576px) {
+  .product-images {
     margin-top: 6rem;
+  }
+  .product-description {
+    background-color: #fff;
+
   }
   .about span {
     line-height: 55px;
@@ -116,3 +142,4 @@
     margin-left: -3rem !important;
   }
 }
+
