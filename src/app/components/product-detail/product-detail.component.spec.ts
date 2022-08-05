@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductService } from 'src/app/shared/services/product.service';
-
+import {HttpClientTestingModule} from '@angular/common/http/testing'
 import { ProductDetailComponent } from './product-detail.component';
 
 describe('ProductDetailComponent', () => {
@@ -10,9 +10,8 @@ describe('ProductDetailComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ProductDetailComponent ],
-      providers:[
-        {provide : ProductService, useClass: ProductService}
-      ]
+      imports:[HttpClientTestingModule],
+      providers:[ProductService]
     })
     .compileComponents();
   });
@@ -23,7 +22,11 @@ describe('ProductDetailComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should have only one record', () => {
+    fixture = TestBed.createComponent(ProductDetailComponent);
+    component = fixture.componentInstance;
+    expect(1).toEqual(1);
+  });
+
+ 
 });

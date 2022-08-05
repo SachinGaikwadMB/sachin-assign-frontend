@@ -21,9 +21,6 @@ export class ProductDetailComponent implements OnInit {
       this.productsData = dataResponse;
       console.log(dataResponse);
       console.log(this.productsData[0].image[0]);
-       
-      
-
     });
   }
 

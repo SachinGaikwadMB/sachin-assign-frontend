@@ -37,7 +37,15 @@ describe('AppComponent', () => {
   it('should have app-navbar', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const { debugElement } = fixture;
-    const counter = debugElement.query(By.css('app-navbar'));
-     expect(counter).toBeTruthy();
+    const navbar = debugElement.query(By.css('app-navbar'));
+     expect(navbar).toBeTruthy();
+  });
+
+
+  it('should have router outlet', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const { debugElement } = fixture;
+    const router = debugElement.query(By.css('router-outlet'));
+     expect(router).toBeTruthy();
   });
 });
