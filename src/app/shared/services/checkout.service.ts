@@ -5,8 +5,6 @@ import { Observable } from 'rxjs';
 import { PaymentInfo } from 'src/app/common/payment-info';
 import { environment } from 'src/environments/environment';
 import { ProductService } from './product.service';
-// import { PaymentInfo } from '../common/payment-info';
-// import { ProductService } from './services/product.service';
 
 @Injectable({
   providedIn: 'root',
@@ -34,7 +32,7 @@ export class CheckoutService {
     );
   }
 
-  async pay(paymentDto: any): Promise<void> {
+   async pay(paymentDto: any): Promise<void> {
     const stripe: any = await this.stripePromise;
     this.httpClient
       .post(environment.baseUrl + '/checkout/payment-intent', paymentDto)

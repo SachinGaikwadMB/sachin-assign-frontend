@@ -19,8 +19,8 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit(): void {
       this.productService.getAllProducts().subscribe((dataResponse) => {
       this.productsData = dataResponse;
-      console.log(dataResponse);
-      console.log(this.productsData[0].image[0]);
+      // console.log(dataResponse);
+      //console.log(this.productsData[0].image[0]);
     });
   }
 
@@ -35,7 +35,6 @@ export class ProductDetailComponent implements OnInit {
       cancelUrl: 'http://localhost:4200/cancel',
       successUrl: 'http://localhost:4200/success',
     };
-
     this.checkoutService.pay(paymentDto);
   }
 }
